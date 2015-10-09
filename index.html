@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+	<!--
+		Click Pic By Mrugesh | Developer : Vatsal Padhiyar
+		Start Date : 19-9
+	-->
+	<html>
+	<head>
+		<title>Click Pic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Start Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- End Favicon -->
+
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="bower_components/google-signin/google-signin.html">
+
+		<link rel="import" href="bower_components/paper-styles/color.html">
+		<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+		<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+		<link rel="import" href="bower_components/paper-button/paper-button.html">
+
+		<style type="text/css">
+		paper-button[raised].colorful {
+			background: #4285f4;
+			color: #fff;
+		}
+		</style>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<section id="main">
+				
+				<div>
+					<google-signin client-id="216465890940-jrtmu9uf6tdgqf40emgfev2sdksehdc6.apps.googleusercontent.com" 
+					scopes="https://www.googleapis.com/auth/drive" width="wide"></google-signin>
+				</div>
+				<div>
+					Login
+					<form method="post" action="#">
+						<div class="field">
+							<input type="text" name="email" id="email" placeholder="Email" />
+							<input type="password" name="password" id="password" placeholder="password" />
+							
+							<paper-button tabindex="0" raised width="200px" class="colorful">login</paper-button>
+						</div>
+					</form>
+					<hr/>
+					Sign Up
+					<form method="post" action="#">
+						<div class="field">
+							<input type="text" name="email" id="email" placeholder="Email" />
+							<input type="password" name="password" id="password" placeholder="password" />
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; Mrugesh | Vatsal</li>
+
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script>
+		if ('addEventListener' in window) {
+			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+		}
+		</script>
+	</body>
+	</html>
