@@ -1,0 +1,364 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"padi",
+				"padding-top"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"trf",
+				"trf-r	transform: rotate(${1:angle});"
+			],
+			[
+				"ease",
+				"ease-in-out"
+			],
+			[
+				"tr",
+				"trs	transition: ${1:prop} ${2:time};"
+			],
+			[
+				"opa",
+				"opacity"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"bol",
+				"bolder"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"marg",
+				"margin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Main Template.html",
+			"settings":
+			{
+				"buffer_size": 5405,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/css/cudos.css",
+			"settings":
+			{
+				"buffer_size": 1735,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"last_filter": "package",
+		"selected_items":
+		[
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp/www/cpnew",
+		"/C/wamp/www/cpnew/assets",
+		"/C/wamp/www/cpnew/assets/css"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/cpnew/index.html",
+		"/C/wamp/www/cpnew/assets/css/main.css",
+		"/C/wamp/www/cpnew/assets/js/respond.min.js",
+		"/C/wamp/www/cpnew/assets/js/PIE.htc",
+		"/C/wamp/www/cpnew/assets/js/html5shiv.js",
+		"/C/Users/Vatsal/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"header",
+			"480",
+			"label",
+			"col",
+			"screen and (max-width: 480px)",
+			"		<",
+			"				\n",
+			"input[type=\"email",
+			"#login",
+			"transform",
+			"body {",
+			"body",
+			"font-w",
+			"main",
+			"#m",
+			"field",
+			"form,"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Main Template.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4290,
+								4296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1681.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/css/cudos.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1735,
+								1735
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cpnew.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

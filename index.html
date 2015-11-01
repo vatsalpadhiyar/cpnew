@@ -3,7 +3,7 @@
 		Click Pic By Mrugesh | Developer : Vatsal Padhiyar
 		Start Date : 19-9
 	-->
-	<html>
+	<html lang="en">
 	<head>
 		<title>Click Pic</title>
 		<meta charset="utf-8" />
@@ -30,7 +30,8 @@
 		<!-- End Favicon -->
 
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -44,46 +45,112 @@
 		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 		<link rel="import" href="bower_components/google-signin/google-signin.html">
 
-		<link rel="import" href="bower_components/paper-styles/color.html">
-		<link rel="import" href="bower_components/paper-styles/demo-pages.html">
 		<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+		
+		<link rel="import" href="bower_components/paper-styles/paper-styles.html">
+		<link rel="import" href="bower_components/paper-input/paper-input.html">
 		<link rel="import" href="bower_components/paper-button/paper-button.html">
 
-		<style type="text/css">
-		paper-button[raised].colorful {
-			background: #4285f4;
-			color: #fff;
-		}
+		<link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
+
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+		<style is="custom-style">
+			.big-icon{
+				--iron-icon-height: 80px;
+				--iron-icon-width: 95px;
+			}
 		</style>
 	</head>
 	<body class="is-loading">
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '978074852257426',
+					xfbml      : true,
+					version    : 'v2.5'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			$(document).ready(function(){
+
+				$(signupEmailButton).on('click',function(){
+					$('#signin-box').hide('slow' );
+					$('#singup-email').show('slow');
+				});
+
+				$(backToLogin).on('click',function(){
+					$('#singup-email').hide('slow');
+					$('#signin-box').show('slow' );
+				});
+			});
+		</script>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
 
+			<div>
+				<h1 class="cp-logo-text"><iron-icon class="big-icon" src="images/cp.png"></iron-icon>Click Pic</h1>
+			</div>
+
 			<!-- Main -->
 			<section id="main">
-				
-				<div>
-					<google-signin client-id="216465890940-jrtmu9uf6tdgqf40emgfev2sdksehdc6.apps.googleusercontent.com" 
-					scopes="https://www.googleapis.com/auth/drive" width="wide"></google-signin>
-				</div>
-				<div>
-					Login
-					<form method="post" action="#">
-						<div class="field">
-							<input type="text" name="email" id="email" placeholder="Email" />
-							<input type="password" name="password" id="password" placeholder="password" />
-							
-							<paper-button tabindex="0" raised width="200px" class="colorful">login</paper-button>
+				<div id="signin-box" class="active">
+					<div id="signup" class="col-md-6">
+						<div class="row">
+							<!-- <google-signin class="login-buttons" client-id="216465890940-jrtmu9uf6tdgqf40emgfev2sdksehdc6.apps.googleusercontent.com" scopes="https://www.googleapis.com/auth/drive" width="wide"></google-signin> -->
+							<paper-button tabindex="0" raised width="200px" class="google login-buttons"  onclick="fb_login();">
+							<iron-icon src="images/google_login.png"></iron-icon> Continue with Google</paper-button>
 						</div>
-					</form>
-					<hr/>
-					Sign Up
+						<div class="row">
+							<paper-button tabindex="0" raised width="200px" class="facebook login-buttons"  onclick="fb_login();">
+							<iron-icon src="images/facebook_login.png"></iron-icon> Continue with Facebook</paper-button>
+						</div>
+						<div class="row">
+							<paper-button tabindex="0" id="signupEmailButton" raised width="200px" class="orange login-buttons">
+							<iron-icon icon="icons:mail"></iron-icon> Signup using Email</paper-button>
+						</div>
+					</div>
+					<div id="orDiv">OR</div>
+					<div id="login" class="col-md-6">
+						<label><b>Login</b></label>
+						<form method="post" action="#">
+							<div class="field">
+								<gold-email-input label="Email address" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
+								<paper-input char-counter type="password" label="Password"></paper-input>
+								<br/>
+								<a id="forgetpass" href="#">Forgot Password?</a><br/>
+								<paper-button tabindex="0" raised width="200px" class="colorful">login</paper-button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="singup-email" style="display:none">
+					
+					<div class="row">
+						<paper-button tabindex="0" id="backToLogin" width="200px" class="pull-left orange-text">
+						<iron-icon icon="icons:chevron-left"></iron-icon> BACK</paper-button>
+					</div>
+					
 					<form method="post" action="#">
+
 						<div class="field">
-							<input type="text" name="email" id="email" placeholder="Email" />
-							<input type="password" name="password" id="password" placeholder="password" />
+							<label><b>Sign Up</b></label>
+							<gold-email-input label="Email address" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
+							<paper-input char-counter type="password" label="Password"></paper-input>
+							<br/><br/>
+
+							By clicking Sign Up, you agree to our <a href="#">Terms and Conditions.</a>
+							<paper-button tabindex="0" raised width="200px" class="green">Sign up</paper-button>
 						</div>
 					</form>
 				</div>
@@ -92,8 +159,7 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<ul class="copyright">
-					<li>&copy; Mrugesh | Vatsal</li>
-
+					<li> All Right Reserved &copy; Click pic</li>
 				</ul>
 			</footer>
 
@@ -102,10 +168,10 @@
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 		<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
 		</script>
 	</body>
 	</html>
