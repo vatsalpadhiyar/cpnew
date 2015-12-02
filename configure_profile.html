@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Click Pic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Start Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/cudos.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-form/iron-form.html">
+    <link rel="import" href="bower_components/iron-icons/image-icons.html">
+    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="bower_components/file-input/file-input.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <style is="custom-style">
+    paper-scroll-header-panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--paper-grey-200, #eee);
+        /* background for toolbar when it is at its full size */
+        --paper-scroll-header-panel-full-header: {
+            background-color: #cd5151;
+            background-image: url(images/animcam.gif);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        ;
+        /* background for toolbar when it is condensed */
+        --paper-scroll-header-panel-condensed-header: {
+            background-color: var(--paper-purple-800, #6a1b9a);
+        }
+        ;
+    }
+    
+    paper-toolbar {
+        /* custom toolbar height */
+        height: 200px;
+        background-color: transparent;
+        overflow: visible;
+    }
+    
+    .verybig-icon {
+        --iron-icon-height: 100%;
+        --iron-icon-width: 100%;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    paper-toolbar paper-icon-button {
+        margin: 0 8px;
+    }
+    
+    .bottom-text {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .bottom-text > h4 {
+        margin-top: 10px;
+        font-family: 'Product Sans', Arial, sans-serif;
+    }
+    
+    .subtitle {
+        padding-top: 4px;
+        font-size: 16px;
+        color: #ccc;
+    }
+    
+    .content {
+        padding: 40px 50px;
+    }
+    
+    .content > h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: 'Product Sans', Arial, sans-serif;
+        color: var(--paper-purple-800, #6a1b9a);
+    }
+    
+    .indent {
+        margin-left: 60px;
+    }
+    
+    .vertical-section-container {
+        @apply(--layout-vertical);
+        @apply(--center-justified);
+    }
+    
+    .vertical-section {
+        background-color: white;
+        padding: 24px;
+        margin: 0 24px 24px 24px;
+        @apply(--shadow-elevation-2dp);
+    }
+    </style>
+</head>
+
+<body class="fullbleed layout vertical">
+    <paper-drawer-panel id="paperDrawerPanel" force-narrow>
+        <div drawer>
+            <paper-toolbar>
+                <paper-item>
+                    Completed Tasks
+                </paper-item>
+            </paper-toolbar>
+        </div>
+        <div main>
+            <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                <paper-toolbar>
+                    <paper-icon-button paper-drawer-toggle id="drawerSelector" icon="menu"></paper-icon-button>
+                    <div class="flex"></div>
+                    <paper-icon-button src="images/followus-fb.png"></paper-icon-button>
+                    <paper-icon-button src="images/followus-twitter-alt.png"></paper-icon-button>
+                    <div class="bottom indent bottom-text" self-end>
+                        <h4>Click Pic</h4>
+                        <div class="subtitle">
+                            Tag Line
+                        </div>
+                    </div>
+                </paper-toolbar>
+                <div class="content">
+                    <h1 class="text-center">Set Up Your Profile</h1>
+                    <div class="vertical-section-container centered">
+                        <div class="vertical-section">
+                            <form id="photographerDetailForm" is="iron-form" action="udpateUserInfo.php" method="post">
+                                <div class="col-md-6 text-center">
+                                    <iron-icon id="profilePic" icon="image:photo" class="verybig-icon"></iron-icon>
+                                    </br>
+                                    <file-input id="profilePic" extensions='["jpeg", "jpg"]' max-size="3000000">
+                                        <paper-button id="profilePicBrowse" tabindex="0" raised width="200px" class="colorful">
+                                            Browse Profile Picture
+                                        </paper-button>
+                                    </file-input>
+                                </div>
+                                <div class="col-md-6">
+                                    <paper-input label="First Name" name="txtFirstName" auto-validate error-message="Please Enter First Name" required></paper-input>
+                                    <paper-input label="Last Name" name="txtLastName" auto-validate error-message="Please Enter Last Name" required></paper-input>
+                                    <paper-input label="Contact" name="txtContact"></paper-input>
+                                    <paper-radio-group selected="Male">
+                                        <paper-radio-button name="Male" value="Male">Male</paper-radio-button>
+                                        <paper-radio-button name="Female" value="Female">Female</paper-radio-button>
+                                    </paper-radio-group>
+                                    <paper-input name="txtAbout" label="About Me"></paper-input>
+                                    </br>
+                                    <paper-button id="Continue" tabindex="0" raised width="200px" class="orange pull-right">
+                                        Continue
+                                    </paper-button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <footer id="footer" class="text-center">
+                        <ul class="copyright">
+                            <li> All Right Reserved &copy; Click pic</li>
+                        </ul>
+                    </footer>
+                </div>
+            </paper-scroll-header-panel>
+        </div>
+    </paper-drawer-panel>
+    <paper-dialog id="modal" modal>
+        <div id="modalData"></div>
+        <div class="buttons">
+            <paper-button dialog-confirm autofocus>Close</paper-button>
+        </div>
+    </paper-dialog>
+    <script type="text/javascript">
+    document.getElementsByTagName('file-input')[0].addEventListener('change', function(event) {
+        var valid = event.detail.valid,
+            invalid = event.detail.invalid,
+            validFilesEl = document.getElementById('profilePic'),
+            validFiles = [],
+            invalidFilesEl = document.getElementById('invalidFiles'),
+            invalidFiles = {};
+
+        if (valid.length) {
+            validFiles = valid.map(function(file) {
+                return {
+                    name: file.name,
+                    size: file.size
+                };
+            });
+            validFilesEl.className = 'pre'
+                // validFilesEl.innerHTML = JSON.stringify(validFiles, null, 3);
+        } else {
+            validFilesEl.className = ''
+            validFilesEl.innerHTML = 'No valid files.';
+        }
+        if (invalid.count) {
+            Object.keys(invalid).forEach(function(key) {
+                if (key !== 'count') {
+                    invalidFiles[key] = invalid[key].map(function(file) {
+                        return {
+                            name: file.name,
+                            size: file.size
+                        };
+                    });
+                }
+            });
+            invalidFilesEl.className = 'pre'
+            invalidFilesEl.innerHTML = JSON.stringify(invalidFiles, null, 3);
+        } else {
+            invalidFilesEl.className = ''
+            invalidFilesEl.innerHTML = 'No invalid files.';
+        }
+    });
+
+    $(document).ready(function() {
+        $("#Continue").click(function() {
+            var photographerDetail = document.getElementById("photographerDetailForm");
+
+            if (photographerDetail.validate()) {
+
+                $.post($('#photographerDetailForm').attr('action'),
+                    $('#photographerDetailForm :input').serializeArray(),
+                    function(info) {
+                        if (info == "nextStep") {
+                            window.location.replace("configure_profile.html");
+                        } else {
+                            console.log(info);
+                            $("#modalData").html(info);
+                            var dialogModal = document.getElementById("modal");
+                            dialogModal.open();
+                        }
+                    });
+            }
+        });
+
+    });
+    </script>
+</body>
+
+</html>

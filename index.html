@@ -46,10 +46,12 @@
 		<link rel="import" href="bower_components/google-signin/google-signin.html">
 
 		<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+		<link rel="import" href="bower_components/iron-form/iron-form.html">
 		
 		<link rel="import" href="bower_components/paper-styles/paper-styles.html">
 		<link rel="import" href="bower_components/paper-input/paper-input.html">
 		<link rel="import" href="bower_components/paper-button/paper-button.html">
+		<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
 
 		<link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
 
@@ -60,6 +62,13 @@
 			.big-icon{
 				--iron-icon-height: 80px;
 				--iron-icon-width: 95px;
+			}
+			.medium-icon{
+				--iron-icon-height: 55px;
+				--iron-icon-width: 55px;
+			}
+			.purple{
+				color: #7683CA;
 			}
 		</style>
 	</head>
@@ -123,13 +132,13 @@
 					<div id="orDiv">OR</div>
 					<div id="login" class="col-md-6">
 						<label><b>Login</b></label>
-						<form method="post" action="#">
+						<form  is="iron-form" method="post" action="#">
 							<div class="field">
 								<gold-email-input label="Email address" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
-								<paper-input char-counter type="password" label="Password"></paper-input>
+								<paper-input char-counter type="password" required label="Password"></paper-input>
 								<br/>
 								<a id="forgetpass" href="#">Forgot Password?</a><br/>
-								<paper-button tabindex="0" raised width="200px" class="colorful">login</paper-button>
+								<paper-button id="loginSubmit" tabindex="0" raised width="200px" class="colorful">login</paper-button>
 							</div>
 						</form>
 					</div>
@@ -141,16 +150,16 @@
 						<iron-icon icon="icons:chevron-left"></iron-icon> BACK</paper-button>
 					</div>
 					
-					<form method="post" action="#">
+					<form  is="iron-form" method="post" id="signUpEmailForm" action="nextStep.php">
 
 						<div class="field">
 							<label><b>Sign Up</b></label>
-							<gold-email-input label="Email address" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
-							<paper-input char-counter type="password" label="Password"></paper-input>
+							<gold-email-input label="Email address" name="txtEmail" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
+							<paper-input char-counter type="password" required name="txtPassword" label="Password"></paper-input>
 							<br/><br/>
 
 							By clicking Sign Up, you agree to our <a href="#">Terms and Conditions.</a>
-							<paper-button tabindex="0" raised width="200px" class="green">Sign up</paper-button>
+							<paper-button id="signUpSubmit" tabindex="0" raised width="200px" class="green">Sign up</paper-button>
 						</div>
 					</form>
 				</div>
@@ -165,13 +174,59 @@
 
 		</div>
 
-		<!-- Scripts -->
-		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-		<script>
-			if ('addEventListener' in window) {
-				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+		<paper-dialog id="registered" modal>
+			<div>
+				<iron-icon class="medium-icon purple" icon="icons:verified-user"></iron-icon>You are already registered
+			</div>
+		<div class="buttons">
+			<paper-button dialog-confirm autofocus>Close</paper-button>
+		</div>
+	</paper-dialog>
+	
+	<paper-dialog id="modal" modal>
+	<div id="modalData"></div>
+	<div class="buttons">
+		<paper-button dialog-confirm autofocus>Close</paper-button>
+	</div>
+</paper-dialog>
+
+<!-- Scripts -->
+<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+<script>
+	if ('addEventListener' in window) {
+		window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+		document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+	}
+
+
+	$(document).ready(function(){
+
+		$("#signUpSubmit").click(function(){
+			var signUpEmailFormEle = document.getElementById("signUpEmailForm");
+
+			if (signUpEmailFormEle.validate()){
+
+				$.post($('#signUpEmailForm').attr('action'), 
+					$('#signUpEmailForm :input').serializeArray(), 
+					function(info) {
+						if (info == "registered"){
+							var dialogRegistered = document.getElementById("registered");
+							dialogRegistered.open();
+						}
+						else if (info == "nextStep"){
+							window.location.replace("configure_profile.html");
+						}
+						else{
+							console.log(info);
+							$("#modalData").html(info);
+							var dialogModal = document.getElementById("modal");
+							dialogModal.open();
+						}
+					});
 			}
-		</script>
-	</body>
-	</html>
+		});
+
+	});
+</script>
+</body>
+</html>

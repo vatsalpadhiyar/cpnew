@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"txt",
+				"txtEmail"
+			],
+			[
+				"inser",
+				"insert_sql_photographer_login"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"sign",
+				"signUpEmailForm"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
 				"bac",
 				"background-color"
 			],
@@ -14,10 +46,6 @@
 			[
 				"pa",
 				"padding-top"
-			],
-			[
-				"max",
-				"max-height"
 			],
 			[
 				"pos",
@@ -34,14 +62,6 @@
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"paddi",
@@ -66,10 +86,6 @@
 			[
 				"opa",
 				"opacity"
-			],
-			[
-				"fon",
-				"font-weight"
 			],
 			[
 				"le",
@@ -100,18 +116,10 @@
 	"buffers":
 	[
 		{
-			"file": "Main Template.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5405,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/css/cudos.css",
-			"settings":
-			{
-				"buffer_size": 1735,
+				"buffer_size": 9115,
 				"line_ending": "Windows"
 			}
 		}
@@ -123,16 +131,20 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 58.0,
-		"last_filter": "package",
+		"height": 357.0,
+		"last_filter": "html",
 		"selected_items":
 		[
+			[
+				"html",
+				"HTMLPrettify"
+			],
 			[
 				"package",
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 416.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -153,13 +165,30 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/cpnew",
-		"/C/wamp/www/cpnew/assets",
 		"/C/wamp/www/cpnew/assets/css"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/cpnew/configure_profile.html",
+		"/C/wamp/www/cpnew/udpateUserInfo.php",
+		"/C/wamp/www/fp/add_assignment.php",
+		"/C/wamp/www/fp/add_portfolio.php",
+		"/C/wamp/www/fp/manage_assignments.php",
+		"/C/wamp/www/fp/show_assignments.php",
+		"/C/wamp/www/fp/upload_photos.php",
 		"/C/wamp/www/cpnew/index.html",
+		"/C/wamp/www/fp/photographerRegistrationSubmit_step2.php",
+		"/C/wamp/www/cpnew/nextStep.php",
+		"/C/wamp/www/cpnew/account/dbhelper.php",
+		"/C/wamp/www/cpnew/assets/css/cudos.css",
+		"/C/wamp/www/cpnew/Main Template.html",
 		"/C/wamp/www/cpnew/assets/css/main.css",
+		"/C/wamp/www/cpnew/bower_components/paper-styles/paper-styles.html",
+		"/C/wamp/www/cpnew/bower_components/paper-styles/default-theme.html",
+		"/C/wamp/www/fp/photographerRegistration_step2.php",
+		"/C/wamp/www/cpnew/bower_components/iron-form/demo/simple-element.html",
+		"/C/wamp/www/fp/photographerRegistrationSubmit_step1.php",
+		"/C/wamp/www/fp/photographerRegistration_step1.php",
 		"/C/wamp/www/cpnew/assets/js/respond.min.js",
 		"/C/wamp/www/cpnew/assets/js/PIE.htc",
 		"/C/wamp/www/cpnew/assets/js/html5shiv.js",
@@ -181,6 +210,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"40px",
+			"footer",
+			"loginSubmit",
+			"card",
+			"product",
+			"\">\n",
+			"form",
 			"header",
 			"480",
 			"label",
@@ -221,59 +257,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Main Template.html",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5405,
+						"buffer_size": 9115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4290,
-								4296
+								5068,
+								5068
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1681.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "assets/css/cudos.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1735,
-								1735
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 840.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

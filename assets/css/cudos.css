@@ -64,20 +64,37 @@ body {
 paper-scroll-header-panel {
 	height: 100%;
 }
-paper-scroll-header-panel {
-	--paper-scroll-header-panel-full-header: {
-		background-color: red;
-	};
-}
-paper-scroll-header-panel {
-	--paper-scroll-header-panel-condensed-header: {
-		background-color: #f4b400;
-	};
-}
 
+
+.unfocused-line.fit.style-scope.paper-input-container{
+	background: #CD5151 !important;
+}
 .cp-logo-text{
 	font-family: 'Product Sans', Arial, sans-serif;
 	text-transform: none;
 	font-size: 3em;
 	padding-bottom: 0;
+}
+
+paper-button[raised].colorful {
+	background: #4285f4;
+	color: #fff;
+}
+
+paper-button.orange {
+	color: #fff;
+	background: #ff9800;
+}
+
+paper-button.orange-text {
+	color: #ff9800;
+}
+
+paper-button.green{
+	color:#fff;
+	background: #4caf50;
+}
+
+footer{
+	padding-top: 25px;
 }
