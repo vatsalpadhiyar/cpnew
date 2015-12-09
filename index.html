@@ -1,232 +1,340 @@
 <!DOCTYPE HTML>
-	<!--
-		Click Pic By Mrugesh | Developer : Vatsal Padhiyar
-		Start Date : 19-9
-	-->
-	<html lang="en">
-	<head>
-		<title>Click Pic</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- Start Favicon -->
-		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="images/favicon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
+<html lang="en">
 
-		<!-- End Favicon -->
+<head>
+    <title>Click Pic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Start Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/cudos.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
 
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    </script>
+    <style is="custom-style">
+        paper-scroll-header-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: var(--paper-grey-200, #eee);
+            /* background for toolbar when it is at its full size */
+            --paper-scroll-header-panel-full-header: {
+                background-color: #cd5151;
+                background-image: url(images/animcam.gif);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            ;
+            /* background for toolbar when it is condensed */
+            --paper-scroll-header-panel-condensed-header: {
+                background-color: var(--paper-purple-800, #6a1b9a);
+            }
+            ;
+        }
 
-		<link rel="stylesheet" href="assets/css/main.css" />
+        paper-toolbar {
+            /* custom toolbar height */
+            height: 200px;
+            background-color: transparent;
+            overflow: visible;
+        }
 
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        paper-toolbar paper-icon-button {
+            margin: 0 8px;
+        }
 
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        .bottom-text {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
 
-		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css" />
-		</noscript>
+        .subtitle {
+            padding-top: 4px;
+            font-size: 16px;
+            color: #ccc;
+        }
 
-		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-		<link rel="import" href="bower_components/google-signin/google-signin.html">
+        .content {
+            padding: 16px 10px 16px 50px;
+            height: 2000px;
+        }
 
-		<link rel="import" href="bower_components/iron-icons/iron-icons.html">
-		<link rel="import" href="bower_components/iron-form/iron-form.html">
-		
-		<link rel="import" href="bower_components/paper-styles/paper-styles.html">
-		<link rel="import" href="bower_components/paper-input/paper-input.html">
-		<link rel="import" href="bower_components/paper-button/paper-button.html">
-		<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+        .indent {
+            margin-left: 60px;
+        }
+        .big-icon{
+            --iron-icon-height: 1.7em;
+            --iron-icon-width: 2em;
+        }
+    </style>
 
-		<link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <script type="text/javascript" src="assets/js/modernizr.custom.79639.js"></script>
+</head>
 
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-		<style is="custom-style">
-			.big-icon{
-				--iron-icon-height: 80px;
-				--iron-icon-width: 95px;
-			}
-			.medium-icon{
-				--iron-icon-height: 55px;
-				--iron-icon-width: 55px;
-			}
-			.purple{
-				color: #7683CA;
-			}
-		</style>
-	</head>
-	<body class="is-loading">
-		<script>
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId      : '978074852257426',
-					xfbml      : true,
-					version    : 'v2.5'
-				});
-			};
+<body class="fullbleed layout vertical" style="overflow:hidden;"><!--  oncontextmenu="return false;"> -->
+    <div id="load">        
+        <div>
+            <img src="images/animcam.gif" width="200px" />
+            <h1 class="cp-logo-text"><iron-icon class="big-icon" src="images/cp.png"></iron-icon>Click Pic</h1>
+        </div>
+    </div>
+    <div id="contents" class="demo-2">
+        <div id="slider" class="sl-slider-wrapper">
+            <div class="sl-slider">
+                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                    <div class="sl-slide-inner">
+                        <div class="bg-img bg-img-1"></div>
+                        <h2>Welcome to ClickPic</h2>
+                        <blockquote>
+                            <p>ClickPic is used to upload images and get updated with the photo lovers at online. <br/>
+                                ClickPic is platform to connect with photo lover at online. <br/>
+                                Here you can share your challenge and also get an opportunity to solve other challenges.</p>
+                                <cite><paper-button raised class="transWhite">Sign In</paper-button></cite>
+                                <cite><paper-button raised class="transWhite">Sign Up</paper-button></cite>
+                            </blockquote>
+                        </div>
+                    </div>
 
-			(function(d, s, id){
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-2"></div>
+                            <h2>Share your Challenges</h2>
+                            <blockquote>
+                                <p>
+                                    ClickPic is provides opportunities to share your challenges online with the millions of the users and get the solution of it easily. <br />
+                                    You also can solve the open challenges of the users at online.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
 
-			$(document).ready(function(){
+                    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="bg-img bg-img-3"></div>
+                            <h2>Upload your Images</h2>
+                            <blockquote>
+                                <p>
+                                    ClickPic is provides functionality to share and upload your images at online and also share your valuebale feedback with others with the like and dislike functionalityies.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <!-- /sl-slider -->
 
-				$(signupEmailButton).on('click',function(){
-					$('#signin-box').hide('slow' );
-					$('#singup-email').show('slow');
-				});
+                    <nav id="nav-dots" class="nav-dots">
+                        <span class="nav-dot-current"></span>
+                        <span></span>
+                        <span></span>
+                    </nav>
 
-				$(backToLogin).on('click',function(){
-					$('#singup-email').hide('slow');
-					$('#signin-box').show('slow' );
-				});
-			});
-		</script>
+                </div><!-- /slider-wrapper -->
+            </div>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+            <script type="text/javascript" src="assets/js/jquery.ba-cond.min.js"></script>
+            <script type="text/javascript" src="assets/js/jquery.slitslider.js"></script>
+            <script type="text/javascript"> 
+                $(function(){
 
-			<div>
-				<h1 class="cp-logo-text"><iron-icon class="big-icon" src="images/cp.png"></iron-icon>Click Pic</h1>
-			</div>
+                    $(".transWhite").on("click",function(){
+                        // similar behavior as an HTTP redirect
+                        setTimeout(function() {
+                            //window.location.replace("login.html");
+                            window.location.href = "login.html";
+                        }, 500);
+                    });
+                });
 
-			<!-- Main -->
-			<section id="main">
-				<div id="signin-box" class="active">
-					<div id="signup" class="col-md-6">
-						<div class="row">
-							<!-- <google-signin class="login-buttons" client-id="216465890940-jrtmu9uf6tdgqf40emgfev2sdksehdc6.apps.googleusercontent.com" scopes="https://www.googleapis.com/auth/drive" width="wide"></google-signin> -->
-							<paper-button tabindex="0" raised width="200px" class="google login-buttons"  onclick="fb_login();">
-							<iron-icon src="images/google_login.png"></iron-icon> Continue with Google</paper-button>
-						</div>
-						<div class="row">
-							<paper-button tabindex="0" raised width="200px" class="facebook login-buttons"  onclick="fb_login();">
-							<iron-icon src="images/facebook_login.png"></iron-icon> Continue with Facebook</paper-button>
-						</div>
-						<div class="row">
-							<paper-button tabindex="0" id="signupEmailButton" raised width="200px" class="orange login-buttons">
-							<iron-icon icon="icons:mail"></iron-icon> Signup using Email</paper-button>
-						</div>
-					</div>
-					<div id="orDiv">OR</div>
-					<div id="login" class="col-md-6">
-						<label><b>Login</b></label>
-						<form  is="iron-form" method="post" action="#">
-							<div class="field">
-								<gold-email-input label="Email address" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
-								<paper-input char-counter type="password" required label="Password"></paper-input>
-								<br/>
-								<a id="forgetpass" href="#">Forgot Password?</a><br/>
-								<paper-button id="loginSubmit" tabindex="0" raised width="200px" class="colorful">login</paper-button>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div id="singup-email" style="display:none">
-					
-					<div class="row">
-						<paper-button tabindex="0" id="backToLogin" width="200px" class="pull-left orange-text">
-						<iron-icon icon="icons:chevron-left"></iron-icon> BACK</paper-button>
-					</div>
-					
-					<form  is="iron-form" method="post" id="signUpEmailForm" action="nextStep.php">
+          // $(function() {
 
-						<div class="field">
-							<label><b>Sign Up</b></label>
-							<gold-email-input label="Email address" name="txtEmail" required auto-validate error-message="Please enter a valid email" ></gold-email-input>
-							<paper-input char-counter type="password" required name="txtPassword" label="Password"></paper-input>
-							<br/><br/>
+          //   var Page = (function() {
 
-							By clicking Sign Up, you agree to our <a href="#">Terms and Conditions.</a>
-							<paper-button id="signUpSubmit" tabindex="0" raised width="200px" class="green">Sign up</paper-button>
-						</div>
-					</form>
-				</div>
-			</section>
+          //       var $navArrows = $( '#nav-arrows' ),
+          //       $nav = $( '#nav-dots > span' ),
+          //       slitslider = $( '#slider' ).slitslider( {
+          //           autoplay : true,
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="copyright">
-					<li> All Right Reserved &copy; Click pic</li>
-				</ul>
-			</footer>
+          //           onBeforeChange : function( slide, pos ) {
 
-		</div>
+          //               $nav.removeClass( 'nav-dot-current' );
+          //               $nav.eq( pos ).addClass( 'nav-dot-current' );
 
-		<paper-dialog id="registered" modal>
-			<div>
-				<iron-icon class="medium-icon purple" icon="icons:verified-user"></iron-icon>You are already registered
-			</div>
-		<div class="buttons">
-			<paper-button dialog-confirm autofocus>Close</paper-button>
-		</div>
-	</paper-dialog>
-	
-	<paper-dialog id="modal" modal>
-	<div id="modalData"></div>
-	<div class="buttons">
-		<paper-button dialog-confirm autofocus>Close</paper-button>
-	</div>
-</paper-dialog>
+          //           }
+          //       } ),
 
-<!-- Scripts -->
-<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-<script>
-	if ('addEventListener' in window) {
-		window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-		document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-	}
+          //       init = function() {
+
+          //           initEvents();
+
+          //       },
+          //       initEvents = function() {
+
+          //                   // add navigation events
+          //                   $navArrows.children( ':last' ).on( 'click', function() {
+
+          //                       slitslider.next();
+          //                       console.log("next");
+          //                       return false;
+
+          //                   } );
+
+          //                   $navArrows.children( ':first' ).on( 'click', function() {
+
+          //                       slitslider.previous();
+          //                       console.log("next");
+          //                       return false;
+
+          //                   } );
+
+          //                   $nav.each( function( i ) {
+
+          //                       $( this ).on( 'click', function( event ) {
+
+          //                           var $dot = $( this );
+
+          //                           if( !slitslider.isActive() ) {
+
+          //                               $nav.removeClass( 'nav-dot-current' );
+          //                               $dot.addClass( 'nav-dot-current' );
+
+          //                           }
+
+          //                           slitslider.jump( i + 1 );
+          //                           return false;
+
+          //                       } );
+
+          //                   } );
+
+          //               };
+
+          //               return { init : init };
+
+          //           })();
+
+          //           Page.init();
+
+          //       /**
+          //        * Notes: 
+          //        * 
+          //        * example how to add items:
+          //        */
+
+          //       /*
+
+          //       var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+
+          //       // call the plugin's add method
+          //       ss.add($items);
+
+          //       */
+
+          //   });
 
 
-	$(document).ready(function(){
+document.onreadystatechange = function () {
+    var state = document.readyState
+    if (state == 'interactive') {
+        document.getElementById('contents').style.visibility="hidden";
+    } else if (state == 'complete') {
+        setTimeout(function(){
+            document.getElementById('load').className += " removeLoad";
+            document.getElementById('contents').style.visibility="visible";
+            document.getElementById('contents').className += " moveContentToTop";
+            var Page = (function() {
 
-		$("#signUpSubmit").click(function(){
-			var signUpEmailFormEle = document.getElementById("signUpEmailForm");
+                    // var $navArrows = $( '#nav-arrows' ),
+                    $nav = $( '#nav-dots > span' ),
+                    slitslider = $( '#slider' ).slitslider({
+                        //autoplay : true,
+                        interval : 6000,
+                        onBeforeChange : function( slide, pos ) {
+                            $nav.removeClass( 'nav-dot-current' );
+                            $nav.eq( pos ).addClass( 'nav-dot-current' );
+                        }
+                    }),
 
-			if (signUpEmailFormEle.validate()){
+                    init = function() {
+                        initEvents();
+                    },
 
-				$.post($('#signUpEmailForm').attr('action'), 
-					$('#signUpEmailForm :input').serializeArray(), 
-					function(info) {
-						if (info == "registered"){
-							var dialogRegistered = document.getElementById("registered");
-							dialogRegistered.open();
-						}
-						else if (info == "nextStep"){
-							window.location.replace("configure_profile.html");
-						}
-						else{
-							console.log(info);
-							$("#modalData").html(info);
-							var dialogModal = document.getElementById("modal");
-							dialogModal.open();
-						}
-					});
-			}
-		});
+                    initEvents = function() {
+                        /*// add navigation events
+                        $navArrows.children( ':last' ).on( 'click', function() {
+                            slitslider.next();
+                            console.log("next");
+                            return false;
 
-	});
+                        });
+                        $navArrows.children( ':first' ).on( 'click', function() {
+                            slitslider.previous();
+                            console.log("next");
+                            return false;
+                        });*/
+
+$nav.each( function( i ) {
+    $( this ).on( 'click', function( event ) {
+        var $dot = $( this );
+        if( !slitslider.isActive() ) {
+            $nav.removeClass( 'nav-dot-current' );
+            $dot.addClass( 'nav-dot-current' );
+        }
+        slitslider.jump( i + 1 );
+        if (slitslider.autoplay){
+            setTimeout(slitslider.play(), slitslider.interval);
+        }
+        return false;
+    });
+});
+};
+
+return { init : init };
+})();
+Page.init();
+},200);
+}
+}
 </script>
 </body>
+
 </html>

@@ -32,6 +32,7 @@
     "iron-form": "PolymerElements/iron-form#~1.0.10",
     "paper-card": "PolymerElements/paper-card#~1.0.7",
     "paper-radio-group": "PolymerElements/paper-radio-group#~1.0.6",
-    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.10"
+    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.10",
+    "neon-animation": "PolymerElements/neon-animation#~1.0.8"
   }
 }
